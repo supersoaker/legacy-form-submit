@@ -1,8 +1,9 @@
 # legacy-form-submit
 A JS script which posts your formular into a iframe and handles all associated post messages.
+
 Just include the main.js or main.min.js and activate it for example with:
 ```js
-submitFormIntoFrame('#form', 'https://example.com?postMessage', function(data) {
+submitFormIntoFrame('#form', 'https://example.com/form.php?postMessage', function(data) {
   if(data.status && status == 'success') {
       console.log(data);
   } else {
