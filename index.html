@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Legacy Form Script</title>
+</head>
+<body>
+
+<form id="form">
+    <input type="text" name="lastname" value="test">
+    <input type="file" name="file">
+    <button type="submit">subbb</button>
+</form>
+<script src="main.min.js"></script>
+<script>
+    submitFormIntoFrame('#form', 'https://example.com?postMessage', function(data) {
+        if(data.status && status == 'success') {
+            console.log(data);
+        } else {
+            console.log('error..', data);
+        }
+    });
+</script>
+</body>
+</html>
